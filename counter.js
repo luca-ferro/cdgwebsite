@@ -17,9 +17,15 @@ const db = getDatabase(app);
 
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById("contact-form");
+    var loader = document.querySelector(".loader");
+
+    function saveFormDataToLocalStorage(name, email, phone, seller) {
+        localStorage.setItem('formData', JSON.stringify({ name, email, phone, seller }));
+    }
     
     form.addEventListener("submit", function(e) {
         e.preventDefault();
+        loader.classList.remove("loader--hidden");
         
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "https://formspree.io/f/mkndeqwj");
@@ -27,6 +33,14 @@ document.addEventListener("DOMContentLoaded", function() {
         
         xhr.onload = function() {
             if (xhr.status === 200) {
+                const formData = new FormData(form);
+                saveFormDataToLocalStorage(
+                    formData.get('name'),
+                    formData.get('email'),
+                    formData.get('phone'),
+                    formData.get('sellers')
+                );
+
                 const dbRef = ref(db)
 
                 get(child(dbRef, 'Counter')).then((snapshot)=>{
@@ -39,9 +53,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 
             } else {
                 console.error("Form submission failed:", xhr.status);
+                alert("Erro no envio dos dados, tente novamente.")
             }
+            loader.classList.add("loader--hidden");
         };
-        
         var formData = new FormData(form);
         xhr.send(JSON.stringify(Object.fromEntries(formData)));
     });

@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        Deu certo
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidando da Gente - Rifa</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/luca-ferro/cdgwebsite/main/assets/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Freeman&display=swap" rel="stylesheet">
+    <script src="displayFormData.js"></script>
+</head>
+<body>
+    <div class="loader loader--hidden"></div>
+    <div class="flex">
+        <img src="https://raw.githubusercontent.com/luca-ferro/cdgwebsite/main/assets/logo.svg" alt="Cuidando da Gente" >
+        <h2>Comprovante de Compra</h2>
+        <label id="name"></label>
+        <label id="email"></label>
+        <label id="phone"></label>
+        <label id="seller"></label>
+        <button type="button" id="voltarButton">← Voltar</button>
+    </div>
+    <script>
+        // Add event listener to the "Voltar" button
+        document.getElementById("voltarButton").addEventListener("click", function() {
+            // Go back to the previous page
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
 </html>

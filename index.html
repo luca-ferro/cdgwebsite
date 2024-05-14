@@ -13,25 +13,26 @@
     <script src="json.js"></script>
 </head>
 <body>
+    <div class="loader loader--hidden"></div>
     <div class="flex">
         <img src="https://raw.githubusercontent.com/luca-ferro/cdgwebsite/main/assets/logo.svg" alt="Cuidando da Gente" >
         <h2>Rifa - Cuidando da Gente</h2>
         <form id="contact-form">
             <label for="name">Nome:</label><br>
-            <input type="text" id="name" name="Nome:" required><br>
+            <input type="text" id="name" name="name" required><br>
             
             <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="E-mail:" required><br>
+            <input type="email" id="email" name="email" required><br>
             
             <label for="phone">Telefone:</label><br>
-            <input type="number" id="phone" name="Telefone:" required><br>
+            <input type="number" id="phone" name="phone" required><br>
 
             <label for="sellers">Quem vendeu:</label><br>
-            <select name="Quem vendeu:" id="sellers">
+            <select name="sellers" id="sellers" required>
                 <option value="">Escolha o vendedor</option>
             </select>
             
-            <input type="submit" value="Enviar">
+            <button type="submit">Enviar</button>
         </form>
     </div>
 </body>

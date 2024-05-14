@@ -52,6 +52,22 @@ label {
     align-items: center;
 }
 
+button {
+    max-width: 340px;
+    width: 700px;
+    justify-content: center;
+    display: flex;
+    border-radius: 100px;
+    border: 2px solid gray;
+    height: 30px;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 30px;
+    background-color: #1375ff99;
+    color: white;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -60,4 +76,38 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/* ----- Loader ----- */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #DDDDDD;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from { transform: rotate(0turn) }
+    to { transform: rotate(1turn); }
 }
