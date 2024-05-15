@@ -39,17 +39,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
         runTransaction(counterRef, (currentData) => {
             if (!currentData) {
-                return 1; // Initialize counter to 1 if it doesn't exist
+                return 1;
             } else {
-                return currentData + 1; // Increment the counter
+                return currentData + 1;
             }
         })
-        .then((newCounter) => {
+        .then((transactionResult) => {
+            const newCounter = transactionResult.snapshot.val();
+            console.log("newCounter: ", newCounter)
             localStorage.setItem('Number', newCounter);
-            const newUserId = newCounter;
+            const newUserId = String(newCounter);
             const userRef = ref(db, 'users/' + newUserId);
-
-            update(ref(db, "Counter"), newCounter);
+        
+            update(ref(db, "Counter"), { Counter: newCounter });
             set(userRef, {
                 name: formData.get('name'),
                 email: formData.get('email'),
@@ -60,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch((error) => {
             console.error("Transaction failed:", error);
-            alert("Error saving data to database, please try again.");
+            alert("Erro ao salvar os dados na base de dados. Tente novamente.");
             loader.classList.add("loader--hidden");
         });
     });
