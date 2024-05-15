@@ -16,6 +16,8 @@
     <div class="flex">
         <img src="https://raw.githubusercontent.com/luca-ferro/cdgwebsite/main/assets/logo.svg" alt="Cuidando da Gente" >
         <h2>Comprovante de Compra</h2>
+        <h3>Número da rifa:</h3>
+        <h1 id="number"></h1>
         <label id="name"></label>
         <label id="email"></label>
         <label id="phone"></label>
@@ -23,9 +25,9 @@
         <button type="button" id="voltarButton">← Voltar</button>
     </div>
     <script>
-        // Add event listener to the "Voltar" button
         document.getElementById("voltarButton").addEventListener("click", function() {
-            // Go back to the previous page
+            localStorage.removeItem("formData");
+            localStorage.removeItem("Number")
             window.location.href = "index.html";
         });
     </script>

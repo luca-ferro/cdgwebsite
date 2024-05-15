@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         loader.classList.remove("loader--hidden");
         
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://formspree.io/f/mkndeqwj");
+        xhr.open("POST", "https://formsubmit.co/luca.ferro10@gmail.com");
         xhr.setRequestHeader("Content-Type", "application/json");
         
         xhr.onload = function() {
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 get(child(dbRef, 'Counter')).then((snapshot)=>{
                     var countVariable = Number(snapshot.val());
                     countVariable++;
-                    
+                    localStorage.setItem('Number', countVariable)
                     update(ref(db,"/"),{Counter: countVariable});
                     window.location.href = "success.html";
                 });
@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 console.error("Form submission failed:", xhr.status);
                 alert("Erro no envio dos dados, tente novamente.")
+                loader.classList.add("loader--hidden");
             }
-            loader.classList.add("loader--hidden");
         };
         var formData = new FormData(form);
         xhr.send(JSON.stringify(Object.fromEntries(formData)));
