@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getDatabase, ref, get, child, update } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { getDatabase, ref, set, update, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCiuErprDUEsVZei9CqphrHcmFtMO1t66o",
@@ -22,42 +22,46 @@ document.addEventListener("DOMContentLoaded", function() {
     function saveFormDataToLocalStorage(name, email, phone, seller) {
         localStorage.setItem('formData', JSON.stringify({ name, email, phone, seller }));
     }
-    
+
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         loader.classList.remove("loader--hidden");
-        
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://formsubmit.co/luca.ferro10@gmail.com");
-        xhr.setRequestHeader("Content-Type", "application/json");
-        
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                const formData = new FormData(form);
-                saveFormDataToLocalStorage(
-                    formData.get('name'),
-                    formData.get('email'),
-                    formData.get('phone'),
-                    formData.get('sellers')
-                );
 
-                const dbRef = ref(db)
+        const formData = new FormData(form);
+        saveFormDataToLocalStorage(
+            formData.get('name'),
+            formData.get('email'),
+            formData.get('phone'),
+            formData.get('sellers')
+        );
 
-                get(child(dbRef, 'Counter')).then((snapshot)=>{
-                    var countVariable = Number(snapshot.val());
-                    countVariable++;
-                    localStorage.setItem('Number', countVariable)
-                    update(ref(db,"/"),{Counter: countVariable});
-                    window.location.href = "success.html";
-                });
-                
+        const counterRef = ref(db, 'Counter');
+
+        runTransaction(counterRef, (currentData) => {
+            if (!currentData) {
+                return 1; // Initialize counter to 1 if it doesn't exist
             } else {
-                console.error("Form submission failed:", xhr.status);
-                alert("Erro no envio dos dados, tente novamente.")
-                loader.classList.add("loader--hidden");
+                return currentData + 1; // Increment the counter
             }
-        };
-        var formData = new FormData(form);
-        xhr.send(JSON.stringify(Object.fromEntries(formData)));
+        })
+        .then((newCounter) => {
+            localStorage.setItem('Number', newCounter);
+            const newUserId = newCounter;
+            const userRef = ref(db, 'users/' + newUserId);
+
+            update(ref(db, "Counter"), newCounter);
+            set(userRef, {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                sellers: formData.get('sellers')
+            });
+            window.location.href = "success.html";
+        })
+        .catch((error) => {
+            console.error("Transaction failed:", error);
+            alert("Error saving data to database, please try again.");
+            loader.classList.add("loader--hidden");
+        });
     });
 });
