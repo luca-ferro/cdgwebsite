@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const newUserId = String(newCounter);
             const userRef = ref(db, 'users/' + newUserId);
         
-            update(ref(db, "Counter"), { Counter: newCounter });
+            update(ref(db, "/"), { Counter: newCounter });
             set(userRef, {
                 name: formData.get('name'),
                 email: formData.get('email'),
