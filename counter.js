@@ -15,6 +15,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
+function findUserPositionById(users, userId) {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].id === userId) {
+            return i; // Retorna a posição do usuário no array quando encontrado
+        }
+    }
+    return -1; // Retorna -1 se o usuário não for encontrado
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById("contact-form");
     var loader = document.querySelector(".loader");
@@ -43,27 +52,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
         runTransaction(userRef, () => {
             console.log(userRef);
-            push(userRef, {
+            const newUser = push(userRef, {
                 name: formData.get('name'),
                 email: formData.get('email'),
                 phone: formData.get('phone'),
                 sellers: formData.get('sellers')
             })
+            const userId = newUser.key;
+            localStorage.setItem("Id", userId);
+            console.log("Novo usuário adicionado com ID:", userId);
         }).then(() => {
-            // Depois de adicionar o usuário, ouça eventos de alteração na referência "users"
             onValue(userRef, (snapshot) => {
                 const users = []; // Array para armazenar os usuários
-        
+            
                 // Iterar sobre os dados de snapshot para extrair os usuários
                 snapshot.forEach((childSnapshot) => {
                     const user = childSnapshot.val(); // Obter os dados do usuário
+                    user.id = childSnapshot.key; // Adicionar o ID do usuário aos dados
                     users.push(user); // Adicionar o usuário ao array
                 });
-        
-                // Agora, a variável "users" contém a lista atualizada de usuários
-                console.log(users); // Faça o que quiser com os usuários, por exemplo, renderize na interface do usuário
-                console.log(users.length);
-                localStorage.setItem("Number", users.length)
+            
+                // Agora, a variável "users" contém a lista atualizada de usuários com IDs
+            
+                // Suponha que você tenha o ID do usuário que deseja encontrar
+                const userIdToFind = localStorage.getItem("Id");
+            
+                // Encontrar a posição do usuário com o ID desejado
+                const userPosition = findUserPositionById(users, userIdToFind);
+                localStorage.setItem("Number", userPosition)
                 window.location.href= "success.html"
             });
         }).catch((error) => {
