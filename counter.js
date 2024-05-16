@@ -1,6 +1,5 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getDatabase, ref, set, update, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { getDatabase, ref,onValue, get, set, update, runTransaction, push } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCiuErprDUEsVZei9CqphrHcmFtMO1t66o",
@@ -15,6 +14,15 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+
+function findUserPositionById(users, userId) {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].id === userId) {
+            return i; // Retorna a posição do usuário no array quando encontrado
+        }
+    }
+    return -1; // Retorna -1 se o usuário não for encontrado
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById("contact-form");
@@ -37,34 +45,45 @@ document.addEventListener("DOMContentLoaded", function() {
         );
         
         const counterRef = ref(db, 'Counter');
-        
-        runTransaction(counterRef, (currentData) => {
-            if (!currentData) {
-                return 1;
-            } else {
-                const sum = currentData + Number(formData.get('quantity'));
-                return sum;
-            }
-        })
-        .then((transactionResult) => {
-            const newCounter = transactionResult.snapshot.val();
-            localStorage.setItem('Number', newCounter);
-            const newUserId = String(newCounter);
-            const userRef = ref(db, 'users/' + newUserId);
-            
-            update(ref(db, "/"), { Counter: newCounter });
-            set(userRef, {
+
+        let timer = async() => {await new Promise(r => {setTimeout(r,  Math.random() * 3)})}
+        timer();
+        const userRef = ref(db, 'users');
+
+        runTransaction(userRef, () => {
+            console.log(userRef);
+            const newUser = push(userRef, {
                 name: formData.get('name'),
                 email: formData.get('email'),
                 phone: formData.get('phone'),
                 sellers: formData.get('sellers')
+            })
+            const userId = newUser.key;
+            localStorage.setItem("Id", userId);
+            console.log("Novo usuário adicionado com ID:", userId);
+        }).then(() => {
+            onValue(userRef, (snapshot) => {
+                const users = []; // Array para armazenar os usuários
+            
+                // Iterar sobre os dados de snapshot para extrair os usuários
+                snapshot.forEach((childSnapshot) => {
+                    const user = childSnapshot.val(); // Obter os dados do usuário
+                    user.id = childSnapshot.key; // Adicionar o ID do usuário aos dados
+                    users.push(user); // Adicionar o usuário ao array
+                });
+            
+                // Agora, a variável "users" contém a lista atualizada de usuários com IDs
+            
+                // Suponha que você tenha o ID do usuário que deseja encontrar
+                const userIdToFind = localStorage.getItem("Id");
+            
+                // Encontrar a posição do usuário com o ID desejado
+                const userPosition = findUserPositionById(users, userIdToFind);
+                localStorage.setItem("Number", userPosition)
+                window.location.href= "success.html"
             });
-            window.location.href = "success.html";
-        })
-        .catch((error) => {
-            console.error("Transaction failed:", error);
-            alert("Erro ao salvar os dados na base de dados. Tente novamente.");
-            loader.classList.add("loader--hidden");
+        }).catch((error) => {
+            console.error("Erro ao adicionar usuário:", error);
         });
     });
 });
