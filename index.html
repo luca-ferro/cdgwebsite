@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="loader loader--hidden"></div>
-    <div class="flex">
+    <div class="flex-column">
         <img src="https://raw.githubusercontent.com/luca-ferro/cdgwebsite/main/assets/logo.svg" alt="Cuidando da Gente" >
         <h2>Rifa - Cuidando da Gente</h2>
         <form id="contact-form">
@@ -26,13 +26,21 @@
             
             <label for="phone">Telefone:</label><br>
             <input type="number" id="phone" name="phone" required><br>
-
+            
             <label for="sellers">Quem vendeu:</label><br>
             <select name="sellers" id="sellers" required>
                 <option value="">Escolha o vendedor</option>
             </select>
-            
-            <button type="submit">Enviar</button>
+
+            <div class="flex-row">
+                <div>
+                    <label for="phone">Quantas rifas?</label><br>
+                    <input type="number" id="quantity" name="quantity" class="quantity" required><br>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </div>
         </form>
     </div>
 </body>

@@ -59,14 +59,25 @@ label, h3 {
     font-style: normal;
 }
 
-.flex {
+.flex-column {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.flex-row {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quantity {
+    max-width: 80px;
+    width: 700px;
+}
+
 button {
-    max-width: 340px;
+    max-width: 225px;
     width: 700px;
     justify-content: center;
     display: flex;
@@ -76,9 +87,9 @@ button {
     font-family: "Freeman", sans-serif;
     font-weight: 400;
     font-size: 18px;
-    margin-top: 30px;
     background-color: #1375ff99;
     color: white;
+    margin-left: 10px;
 }
 
 input::-webkit-outer-spin-button,
@@ -98,7 +109,7 @@ input[type=number] {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;

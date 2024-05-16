@@ -34,23 +34,23 @@ document.addEventListener("DOMContentLoaded", function() {
             formData.get('phone'),
             formData.get('sellers')
         );
-
+        
         const counterRef = ref(db, 'Counter');
-
+        
         runTransaction(counterRef, (currentData) => {
             if (!currentData) {
                 return 1;
             } else {
-                return currentData + 1;
+                const sum = currentData + Number(formData.get('quantity'));
+                return sum;
             }
         })
         .then((transactionResult) => {
             const newCounter = transactionResult.snapshot.val();
-            console.log("newCounter: ", newCounter)
             localStorage.setItem('Number', newCounter);
             const newUserId = String(newCounter);
             const userRef = ref(db, 'users/' + newUserId);
-        
+            
             update(ref(db, "/"), { Counter: newCounter });
             set(userRef, {
                 name: formData.get('name'),
