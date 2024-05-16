@@ -115,6 +115,25 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+/* ----- Password ----- */
+
+.password {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.password--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* ----- Loader ----- */
 
 .loader {

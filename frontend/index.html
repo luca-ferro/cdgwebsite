@@ -10,10 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Freeman&display=swap" rel="stylesheet">
     <script type="module" src="counter.js"></script>
-    <script src="json.js"></script>
+    <!-- <script src="json.js"></script> -->
 </head>
 <body>
     <div class="loader loader--hidden"></div>
+    <div class="password flex-column password--hidden">
+        <div>
+            <h3>Digite a senha para:</h3><br>
+            <h3 id="user"></h3>
+        </div>
+        <input type="password" pattern="[0-9]*" inputmode="numeric" id="password" name="password" required><br><br>
+        <button id="password-submit" type="button">Enviar</button>
+    </div>
     <div class="flex-column">
         <img src="https://raw.githubusercontent.com/luca-ferro/cdgwebsite/main/assets/logo.svg" alt="Cuidando da Gente" >
         <h2>Rifa - Cuidando da Gente</h2>
@@ -42,26 +50,25 @@
                 </div>
             </div>
         </form>
-        <script>
-            var celular = document.getElementById("phone");
-
-            celular.addEventListener("input", ( ) => {
-                var limparValor = celular.value.replace(/\D/g, "").substring(0,11);
-                var numerosArray = limparValor.split("");
-                var numeroFormatado = "";
-                if(numerosArray.length > 0) {
-                    numeroFormatado += `(${numerosArray.slice(0,2).join((""))})`;
-                }
-                if(numerosArray.length > 2) {
-                    numeroFormatado += `${numerosArray.slice(2,7).join((""))}`;
-                }
-                if(numerosArray.length > 7) {
-                    numeroFormatado += `${numerosArray.slice(7,11).join((""))}`;
-                }
-                celular.value = numeroFormatado;
-            });
-
-        </script>
     </div>
 </body>
+<script>
+    // var celular = document.getElementById("phone");
+
+    // celular.addEventListener("input", ( ) => {
+    //     var limparValor = celular.value.replace(/\D/g, "").substring(0,11);
+    //     var numerosArray = limparValor.split("");
+    //     var numeroFormatado = "";
+    //     if(numerosArray.length > 0) {
+    //         numeroFormatado += `(${numerosArray.slice(0,2).join((""))})`;
+    //     }
+    //     if(numerosArray.length > 2) {
+    //         numeroFormatado += `${numerosArray.slice(2,7).join((""))}`;
+    //     }
+    //     if(numerosArray.length > 7) {
+    //         numeroFormatado += `${numerosArray.slice(7,11).join((""))}`;
+    //     }
+    //     celular.value = numeroFormatado;
+    // });
+</script>
 </html>
