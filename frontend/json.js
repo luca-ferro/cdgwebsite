@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('sellers.json') // Fetch the JSON file
-        .then(response => response.json()) // Parse JSON response
+    fetch('sellers.json')
+        .then(response => response.json())
         .then(data => {
             const select = document.getElementById('sellers');
             data.sellers.forEach(option => {
