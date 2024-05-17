@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = document.getElementById("email");
         email.textContent = `E-mail: ${formData.mail}`;
         const telefone = document.getElementById("phone");
-        telefone.textContent = `Telefone: (${formData.phone.slice(0,2)}) ${formData.phone.slice(2)}`;
+        telefone.textContent = `Telefone: ${formData.phone}`;
         const seller = document.getElementById("seller");
         seller.textContent = `Quem vendeu: ${formData.seller}`
     } else {
