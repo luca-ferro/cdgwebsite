@@ -7,17 +7,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const rifa = document.getElementById("number");
     rifa.textContent = `${numberData}`;
 
-    if (formData) {
-        const nome = document.getElementById("name");
-        nome.textContent = `Nome: ${formData.name}`;
-        const email = document.getElementById("email");
-        email.textContent = `E-mail: ${formData.mail}`;
-        const telefone = document.getElementById("phone");
-        telefone.textContent = `Telefone: ${formData.phone}`;
-        const seller = document.getElementById("seller");
-        seller.textContent = `Quem vendeu: ${formData.seller}`
-    } else {
+    if (!formData) {       
         const formDataDisplay = document.getElementById("formDataDisplay");
         formDataDisplay.textContent = "Form data not available";
+        return 
     }
+    
+    const nome = document.getElementById("name");
+    nome.textContent = `Nome: ${formData.name}`;
+    const email = document.getElementById("email");
+    email.textContent = `E-mail: ${formData.mail}`;
+    const telefone = document.getElementById("phone");
+    telefone.textContent = `Telefone: ${formData.phone}`;
+    const seller = document.getElementById("seller");
+    seller.textContent = `Quem vendeu: ${formData.seller}`
 });
