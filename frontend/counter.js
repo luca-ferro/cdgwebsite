@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         body: JSON.stringify(formData)
                     }
                     
-                    fetch("http://localhost:9091/buyers", requestConfig)
+                    fetch("http://172.16.200.108:9091/buyers", requestConfig)
                     .then(response => response.json())
                     .then(dataObject => {
                         localStorage.setItem('formData', JSON.stringify(formData));
