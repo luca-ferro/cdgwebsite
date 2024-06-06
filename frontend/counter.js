@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
                 passwordDiv.classList.remove('password--hidden');
+                const quantidade = Number(document.getElementById("quantity").value)
+                const valor = document.getElementById("totalprice")
+                valor.textContent = "R$ " + quantidade * 2 + ",00"
             });
 
             passwordSubmitButton.addEventListener('click', function() {
