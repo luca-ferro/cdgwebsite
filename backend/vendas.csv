@@ -1,18 +1,40 @@
 numero,nome,email,telefone,vendedor,data
-1,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Lara Kramer Chiomark Malaquias,27/05/2024
-2,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Lara Kramer Chiomark Malaquias,27/05/2024
-3,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-4,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-5,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-6,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-7,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-8,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-9,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-10,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-11,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-12,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-13,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-14,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-15,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,27/05/2024
-16,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Luca Ferro Oliveira,28/05/2024
-17,Luiz Felipe,luiz.nogueira@outlook.com,(12) 32212-0932,Lara Kramer Chiomark Malaquias,28/05/2024
+1,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+2,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+3,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+4,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+5,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+6,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+7,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+8,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+9,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+10,Gabriel Piva Pereira,gabriel.piva@sou.unifal-mg.edu.br,(35) 99719-2417,Luca Ferro Oliveira,31/05/2024
+11,Pedro Medina Stracieri,pedro.stracieri@sou.unifal-mg.edu.br,(31) 98559-2544,Luca Ferro Oliveira,04/06/2024
+12,Pedro Medina Stracieri,pedro.stracieri@sou.unifal-mg.edu.br,(31) 98559-2544,Luca Ferro Oliveira,04/06/2024
+13,João Victor Fernandes Rocha,joaovictor.rocha@sou.unifal-mg.edu.br,(35) 99936-7327,Pedro Henrique Borges Luiz,05/06/2024
+14,Camilly Souza do Nascimento Vicente,camilly.vicente@sou.unifal-mg.edu.br,(12) 98107-9097,Pedro Henrique Borges Luiz,05/06/2024
+15,Carlos Augusto Regis Lorin,carloslorimm@gmail.com,(35) 99963-7609,Pedro Henrique Borges Luiz,05/06/2024
+16,Miguel rossetto leone,miguel.rossetto.leone@gmail.con,(16) 99798-4670,Pedro Henrique Borges Luiz,05/06/2024
+17,Miguel rossetto leone,miguel.rossetto.leone@gmail.con,(16) 99798-4670,Pedro Henrique Borges Luiz,05/06/2024
+18,Miguel rossetto leone,miguel.rossetto.leone@gmail.con,(16) 99798-4670,Pedro Henrique Borges Luiz,05/06/2024
+19,Miguel rossetto leone,miguel.rossetto.leone@gmail.con,(16) 99798-4670,Pedro Henrique Borges Luiz,05/06/2024
+20,Miguel rossetto leone,miguel.rossetto.leone@gmail.con,(16) 99798-4670,Pedro Henrique Borges Luiz,05/06/2024
+21,Miguel rossetto leone,miguel.rossetto.leone@gmail.con,(16) 99798-4670,Pedro Henrique Borges Luiz,05/06/2024
+22,Miguel rossetto leone,miguel.rossetto.leone@gmail.con,(16) 99798-4670,Pedro Henrique Borges Luiz,05/06/2024
+23,Miguel rossetto leone,miguel.rossetto.leone@gmail.con,(16) 99798-4670,Pedro Henrique Borges Luiz,05/06/2024
+24,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+25,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+26,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+27,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+28,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+29,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+30,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+31,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+32,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+33,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+34,Arthur Barros Klimas,klimasarthur@gmail.com,(12) 99760-4935,Pedro Henrique Borges Luiz,05/06/2024
+35,Gabriel Ribeiro,gabrielpudim.ribeiro@gmail.com,(16) 99644-5728,Pedro Henrique Borges Luiz,05/06/2024
+36,Gabriel Ribeiro,gabrielpudim.ribeiro@gmail.com,(16) 99644-5728,Pedro Henrique Borges Luiz,05/06/2024
+37,Gabriel Ribeiro,gabrielpudim.ribeiro@gmail.com,(16) 99644-5728,Pedro Henrique Borges Luiz,05/06/2024
+38,Gabriel Ribeiro,gabrielpudim.ribeiro@gmail.com,(16) 99644-5728,Pedro Henrique Borges Luiz,05/06/2024
+39,Gabriel Ribeiro,gabrielpudim.ribeiro@gmail.com,(16) 99644-5728,Pedro Henrique Borges Luiz,05/06/2024

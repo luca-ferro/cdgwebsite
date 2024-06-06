@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         body: JSON.stringify(formData)
                     }
                     
-                    fetch("http://172.16.200.108:9091/buyers", requestConfig)
+                    fetch("https://www.cuidandodagente.com.br/buyers", requestConfig)
                     .then(response => response.json())
                     .then(dataObject => {
                         localStorage.setItem('formData', JSON.stringify(formData));
@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 } else {
                     alert("Senha incorreta. Tente novamente.");
+                    loader.classList.add('loader--hidden');
                 }
             });
         })
