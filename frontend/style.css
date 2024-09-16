@@ -1,5 +1,5 @@
 body {
-    background-color: #036bfe;
+    background-color: #000;
     margin: 0;
 }
 
@@ -10,19 +10,19 @@ img {
 
 h2 {
     color: white;
-    font-family: "Chewy", system-ui;
-    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
     font-style: normal;
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #D20000;
+    background-color: #101010;
 }
 
 h1 {
     color: white;
-    font-family: "Chewy", system-ui;
-    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
     font-style: normal;
     width: 100%;
     display: flex;
@@ -38,14 +38,20 @@ input, select {
     width: 700px;
     align-items: center;
     display: flex;
-    border-radius: 100px;
-    border: 2px solid gray;
+    border: none;
     height: 30px;
     font-family: "Freeman", sans-serif;
     font-weight: 400;
     font-style: normal;
     padding: 0 10px;
     font-size: 18px;
+    background-color: #000;
+    border-bottom: 2px rgba(255, 255, 255, 0.498) solid;
+    color: white;
+}
+
+input:focus{
+    outline: none;
 }
 
 select {
@@ -93,7 +99,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0048ad;
+    background-color: #101010;
     margin-top: 30px;
     height: 40px;
 }
@@ -112,12 +118,12 @@ button {
     justify-content: center;
     display: flex;
     border-radius: 100px;
-    border: 2px solid gray;
+    border: none;
     height: 30px;
     font-family: "Freeman", sans-serif;
     font-weight: 400;
     font-size: 18px;
-    background-color: #1375ff99;
+    background-color: #ec8b00;
     color: white;
     margin-left: 10px;
 }
