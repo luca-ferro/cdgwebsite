@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidando da Gente - Rifa</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/luca-ferro/cdgwebsite/main/assets/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Freeman&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader loader--hidden"></div>
+    <div class="flex-column">
+        <img src="https://raw.githubusercontent.com/luca-ferro/cdgwebsite/main/assets/logo.svg" alt="Cuidando da Gente" >
+        <h2>Tela de Administração</h2>
+        <h3>Baixar tabela das rifas</h3>
+        <button type="button" id="excel" class="excel-button">
+            <img src="assets/icons8-excel.svg" class="excel">
+            Planilha Excel
+        </button>
+    </div>
+    <script>
+        document.getElementById("excel").addEventListener("click", async function() {
+            const requestConfig = {
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                method: "GET",
+            }
+            
+            const response = await fetch("https://www.cuidandodagente.com.br/csv", requestConfig)
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+                alert("Erro ao baixar o arquivo excel. Tente novamente.");
+                loader.classList.add("loader--hidden");
+            }
+            
+            const contentDisposition = response.headers.get('Content-Disposition');
+
+            const blob = await response.blob();
+            const downloadUrl = window.URL.createObjectURL(blob);
+
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.setAttribute('download', "Rifas.xlsx"); // Define o nome do arquivo para download
+            document.body.appendChild(link);
+            link.click();
+            link.parentNode.removeChild(link);
+        });
+    </script>
+</body>
+</html>
