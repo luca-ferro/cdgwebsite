@@ -1,140 +1,104 @@
 {
   "sellers": [
     {
-      "name": "Ana Marcela Moreira Lopes",
-      "password": "anam2022"
+      "name": "Amanda Soares Teixeira",
+      "password": "aman2024"
     },
     {
-      "name": "Cynthia Aparecida de Souza Pepe",
-      "password": "cynt2022"
+      "name": "Ana Carolina Carvalho Bicheiro",
+      "password": "anac2024"
     },
     {
-      "name": "Dener Kaique Cardoso da Silva",
-      "password": "dene2024"
+      "name": "Ana Júlia Cursino Faria",
+      "password": "anaj2024"
     },
     {
-      "name": "Emanuelly Ledo Silva",
-      "password": "eman2023"
+      "name": "Ana Luiza Faria Santos",
+      "password": "anas2024"
     },
     {
-      "name": "Francine Kellen Oliveira Silva",
-      "password": "fran2019"
+      "name": "Ana Luiza Silva Gomes",
+      "password": "anag2024"
     },
     {
-      "name": "Giovana Alves Lopes",
-      "password": "giov2022"
+      "name": "André Vinícius Neves da Silva",
+      "password": "andr2024"
     },
     {
-      "name": "Giovana Maia Meireles de Barros",
-      "password": "giov2023"
+      "name": "Beatriz Souza Júlio",
+      "password": "beat2024"
     },
     {
-      "name": "Giovanna Ferriello",
-      "password": "giov2024"
+      "name": "Bruna Caldas Guedes",
+      "password": "brun2024"
     },
     {
-      "name": "Hevellyn Carolini Ferreira de Souza",
-      "password": "heve2024"
+      "name": "Bruno Martins Biondi",
+      "password": "brun2024"
     },
     {
-      "name": "Iasmim Renó Jorge Moreira",
-      "password": "iasm2023"
+      "name": "Carolina Lima",
+      "password": "caro2024"
     },
     {
-      "name": "Igor de Oliveira Freire Monteiro",
-      "password": "igor2022"
+      "name": "Clara Martins Lima",
+      "password": "clar2024"
     },
     {
-      "name": "Janaína Alves Piccart",
-      "password": "jana2022"
+      "name": "Felipe José Capellato Santos de Oliveira",
+      "password": "feli2024"
     },
     {
-      "name": "Julia Baaklini Petroucic",
+      "name": "Isabela Renata Monteiro Nascimento",
+      "password": "isab2024"
+    },
+    {
+      "name": "Juliano Ferreira do Amaral",
       "password": "juli2024"
     },
     {
-      "name": "Lara Kramer Chiomark Malaquias",
-      "password": "lara2022"
-    },
-    {
-      "name": "Letícia de Lima",
-      "password": "leti2024"
+      "name": "Laís Lima Guimarães",
+      "password": "lais2024"
     },
     {
       "name": "Luca Ferro Oliveira",
-      "password": "luca2023"
+      "password": "luca2024"
     },
     {
-      "name": "Luiz Felipe de Oliveira Silva",
-      "password": "luiz2023"
+      "name": "Luiza Rodrigues Alves",
+      "password": "luiz2024"
     },
     {
-      "name": "Luiz Roberto Oliveira de Paiva",
-      "password": "luiz2023"
-    },
-    {
-      "name": "Luíza Niz Chagas Silva",
-      "password": "luiz2023"
-    },
-    {
-      "name": "Maria Alice Donizetti Fonseca",
-      "password": "mari2023"
-    },
-    {
-      "name": "Maria Catarina Terra Bernardes",
-      "password": "mari2022"
-    },
-    {
-      "name": "Maria Luíza Tomaz Silva",
+      "name": "Maria Clara Da Cunha Moreira",
       "password": "mari2024"
     },
     {
-      "name": "Maria Yolanda Nunes Guimarães",
-      "password": "mari2023"
+      "name": "Maria Luiza Prado Fernandes Pereira",
+      "password": "mari2024"
     },
     {
-      "name": "Marina Pereira Bedin",
-      "password": "mari2022"
+      "name": "Mariana Ribeiro Dias",
+      "password": "mari2024"
     },
     {
-      "name": "Pedro Henrique Borges Luiz",
-      "password": "pedr2024"
+      "name": "Millena Amaral Pereira Sacilotti",
+      "password": "mill2024"
     },
     {
-      "name": "Pedro Henrique Esteves Lemos",
-      "password": "pedr2024"
+      "name": "Nathan Teixeira Campos",
+      "password": "nath2024"
     },
     {
-      "name": "Sofia Mariana Costa de Oliveira",
-      "password": "sofi2022"
+      "name": "Rafaela Sonnewend",
+      "password": "rafa2024"
     },
     {
-      "name": "Tayssa Detimermane de Castro",
-      "password": "tay2024"
+      "name": "Rebeca Victoria de Miranda",
+      "password": "rebe2024"
     },
     {
-      "name": "Thamires Aparecida da Silva",
-      "password": "tham2021"
-    },
-    {
-      "name": "Thayana Monique Irineia Paturel",
-      "password": "thay2024"
-    },
-    {
-      "name": "Túlio Henrique Romero Nunhez",
-      "password": "tuli2022"
-    },
-    {
-      "name": "Yasmin Cristine Silva Alves",
-      "password": "yasm2023"
-    },
-    {
-      "name": "Zélia Marilda Rodrigues Resck",
-      "password": "zelia123"
-    },
-    {
-      "name": "Fábio de Souza Terra",
-      "password": "fabio123"
+      "name": "Sarah Ferreira Coutinho",
+      "password": "sara2024"
     }
   ]
 }
